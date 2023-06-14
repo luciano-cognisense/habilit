@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HabilitPress</title>
+  <link rel="stylesheet" href="tabela.css">
+  <link rel="stylesheet" href="modal.css">    
+  <link rel="stylesheet" type="text/css" href="habilit.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="area-superior">
+    <img src="https://imgur.com/naAHLtc.png" alt="Logo">
+    <p>Habilit<b>Press</b> - <i>Habilidades na medida para sua empresa </i></p>
+  </div>
+  <div id="area-central">
+    <div id="espaco-central">
+        
+          <!--<div id="lado_esquerdo">
+              <h2><i>Simulação de Caso</i></h2>
+              <div id="texto_introducao">O cliente, de uma grande indústria metalmecânica da região, reportou a seguinte situação:</div>
+              <div id="texto_contexto">Infelizmente estamos passando por um período de grande rotatividade e muitos dos novos funcionários chegam sem conhecimentos básicos de interpretação de desenhos técnicos. Perdemos um tempo grande capacitando estes funcionários até um nível onde possam executar suas funções sem supervisão. Outra preocupação nossa é com a utilização de softwares. Aqui na empresa tudo funciona em cima do SolidWorks e nem todos dominam bem a ferramenta. Por fim, acho que seria fundamental que os líderes de setor desenvolvessem mais habilidades de gestão. Acredito que um bom líder aqui na empresa precisa desenvolver a capacidade de gerir bem a equipe,  os projetos e o tempo.</div>
+              <div id="texto_chamada">Baseado no relato do cliente, crie uma solução de aprendizagem personalizada para o cliente, adicionando módulos de aprendizagem que contemplem o desenvolvimento de habilidades necessárias ao cliente.</div>
+          </div>-->
+          <div id="lado_direito">
+          <div id="print_space">
+                <div class = "modulos" id="modulo0">
+                    <div class="linha_1">
+                        <div class="nome_modulo" id="id_nome_modulo" onclick="editarTexto(id)">Módulo 1</div>
+                        <div class="modalidade" id="id_modalidade"><b>EAD</b></div>
+                    </div>
+                    <div class="linha_2">
+                        <div class="nome_curso" id="id_nome_curso"><b>Curso Original:</b> Eletrotécnica</div>
+                        <div class="nome_area" id="id_nome_area"><b>Área: </b>Elétrica</div>
+                    </div>
+                    <div class="linha_3">
+                        <div class="unidade_curricular" id="id_unidade_curricular"><b>Unidade Curricular:</b> Circuitos Elétricos</div>
+                        <div class="carga_area" id="id_carga_horaria"><b>Carga Horária: </b>40h</div>
+                    </div>
+                    <div class="linha_4">
+                        <div class="mostrar_habilidades" id="id_mostrar_habilidades" onclick="mostrarDivHabilidades(id)"><b>Habilidades:</b></div>
+                        <div class="habilidades" id="id_habilidades"><i>Reconhecer...<br>Distinguir...</i></div>
+                    </div>
+                </div>
+          </div>
+        
+          <button class="fab fixed bottom right" id="myBtn">+</button>
+          <button class="fab fixed " id="myBtn2" disabled onclick="printPage()" ></button>
+          <script src="tabela.js"></script>  
+          </div>
+          
+    </div>
+  </div>
+  <div id="area-inferior">
+      <img src="https://imgur.com/MxkvJIs.png" width="100">
+      <img src="https://imgur.com/T2bRJUB.png" width="100">
+  </div>
+  <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="close">&times;</span>
+               <h2>Construa o seu módulo</h2>
+            </div>
+            <div class="modal-body">
+               <div class = "setup">
+                  <div class = "modulos" id="md">
+                    <div class="linha_1">
+                        <div class="nome_modulo" id="id_nome_modulo" onclick="editarTexto(id)">Módulo</div>
+                        <div class="modalidade" id="id_modalidade">
+                            <select id="sl_modalidade">
+                                 <option value="EAD">EAD</option>
+                                 <option value="Presencial">Presencial</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="linha_2">
+                        <div class="nome_curso" id="sl_curso_inner"><b>Curso Original:</b>
+                            <!--<div id="sl_curso_inner"></div>
+                            <select id="sl_curso" disabled="true">
+                                <option value="" disabled selected> Selecione o curso</option>
+                            </select>-->
+                        </div>
+                        <div class="nome_area" id="id_nome_area" placeholder="Selecione a Área"><b>Área: </b>
+                            <select id="sl_area">
+                                <option value="" disabled selected> Selecione a Área</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="linha_3">
+                        <div class="unidade_curricular" id="id_unidade_curricular"><b>Unidade Curricular:</b> 
+                            <select id="sl_uc" disabled="true">
+                                <option value="" disabled selected> Selecione a Unidade Curricular</option>
+                            </select>
+                        </div>
+                        <div class="carga_area" id="sl_carga_horaria"><b>Carga Horária: </b>--</div>
+                    </div>
+                    <div class="linha_4">
+                        <div class="mostrar_habilidades" id="id_mostrar_habilidades" onclick="mostrarDivHabilidades(id)"><b>Habilidades:</b></div>
+                        <div class="habilidades" id="sl_habilidades"><i>...</i></div>
+                    </div>
+                  </div>
+                </div>
+            <div class="modal-footer">
+               <button id="confirma_modal" onclick="appendModule()">Confirma</button>
+            </div>
+         </div>
+      </div>
+    </div>
+
+  <script src="habilit.js"></script>
+  <script type="text/javascript" src="modal.js"></script>
+</body>
+</html>
+
+<!--<input type="file" id="input-arquivo">
+          <div id="filtros">
+            <!-- Dropdown de seleção de colunas -->
+<!--            <select id="dropdown-colunas">
+<!--              <option value="">Selecionar coluna</option>
+            </select>
+          </div>
+
+          <div id="tabela-original"></div>
+          <div id="tabela"></div>

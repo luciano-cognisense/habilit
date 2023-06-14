@@ -1,0 +1,208 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Trebuchet MS";
+  /*background-image: url("background.png");*/
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+    url(https://imgur.com/su05QpP.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#area-superior {
+  height: 15%;
+  width: 100%;
+  /*background-color: #f2f2f2;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  /*opacity: 80%;*/
+}
+
+#area-central {
+  /*height: 75%;*/
+  width: 100%;
+}
+
+#espaco-central {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #E5E5E5;
+  opacity: 90%;
+  position: relative;  
+  display: flex;
+}
+
+#lado_esquerdo {
+  flex: 0 0 30%;
+  height: 100%;
+  background-color: #FEFEFE;
+  font-family: "Trebuchet MS";
+  overflow: auto;
+}
+
+h2, #texto_introducao, #texto_chamada, #texto_contexto{
+    /*padding:5px;*/
+    padding-left:5px;
+    padding-right:5px;
+    text-align: center;
+}
+
+#texto_chamada, #texto_contexto, #texto_introducao{
+    padding-bottom:10px;
+    padding-left:12px;
+    padding-right:12px;
+    font-size: 12.5px;
+    line-height: 1.2;
+}
+
+#texto_contexto{
+    color: #604dac;
+    font-size: 13.5px;
+    font-weight: bold;
+}
+
+
+#lado_direito {
+  flex: 1;
+  height: 100%;
+  /*background-color: gray;*/
+  overflow: auto; /* Adiciona o overflow para ativar a barra de rolagem */
+}
+
+#area-inferior {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  /*background-color: #f2f2f2;*/
+}
+
+#area-inferior img {
+  padding-right: 25px;
+}
+
+#area-superior img {
+  width: 100px; /* Defina a largura desejada para a imagem */
+  height: auto;
+}
+
+#area-superior p {
+  /*margin-top: 15px;*/
+  font-size: 36px;
+  color: white;
+}
+
+button{
+    cursor: pointer;
+    background-color: #604dac;
+    color: white;
+}
+
+button:hover{
+    background-color: #715ebd;
+    transform:scale(1.1,1.1);
+    
+}
+
+button.fab{
+    width: 54px;
+    height:54px;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+button.fab.fixed{
+    position: absolute;       ;
+}
+
+button.fab.bottom{
+    bottom: 15px;
+}
+
+button.fab.right{
+    right: 20px;
+}
+
+#myBtn2{
+    right: 100px;
+    bottom: 15px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.modulos{
+  width: 85%;
+  box-shadow: 2px 2px 2px gray;
+  /*margin: 0 auto 10px 10px;;*/
+  background-color: white;
+  opacity: 100%;
+  font-family: "Trebuchet MS";
+  border-left: 15px solid #604dac;
+  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  cursor: pointer;
+}
+
+#modulo0{
+    display: none;
+}
+
+.modulos:hover{
+  /*background-color: lightgray;*/
+  /*transform:scale(1.1,1.1);*/
+}
+
+.linha_1, .linha_2, .linha_3 {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.linha_3{
+  padding-top: 5px;    
+}
+
+.nome_modulo, .nome_curso, .mostrar_habilidades, .habilidades, .unidade_curricular {
+  text-align: left;
+  display: block;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.nome_area, .carga_area, .modalidade {
+  text-align: right;
+  display: block;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.mostrar_habilidades{
+    /*display: none;*/
+    padding-top: 5px;
+}
+
+.mostrar_habilidades:hover{
+    color: blue;
+}
+
+.habilidades{
+  /*display: none;*/
+  font-size: 12px;
+  padding-left: 15px;
+}
+
+.nome_modulo, .modalidade{
+  font-size: 18px;
+  font-weight: bold;
+}
